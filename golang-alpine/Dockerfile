@@ -14,8 +14,8 @@ ENV GOPRODIR /go/src
 RUN export GOPROXY=$PROXY
 
 # ############## golang dependency ###########
-RUN apk add gcc
-RUN apk add libc-dev
+RUN apk add --no-cache gcc
+RUN apk add --no-cache libc-dev
 RUN apk add --no-cache git
 
 # ############## work dir ###########
