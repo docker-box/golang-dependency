@@ -6,7 +6,7 @@ LABEL maintainer="fizzday <fizzday@yeah.net>" \
 
 # ############## env ##############
 ENV TZ Asia/Shanghai
-ENV PROXY https://goproxy.cn
+ENV PROXY ""
 ENV GO111MODULE on
 ENV GOPRODIR /var/www
 
