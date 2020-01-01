@@ -8,6 +8,7 @@ LABEL maintainer="fizzday <fizzday@yeah.net>" \
 ENV TZ Asia/Shanghai
 ENV PROXY ""
 ENV GO111MODULE on
+ENV GOPRODIR /go/src
 
 # ############## proxy ##############
 RUN export GOPROXY=$PROXY
@@ -16,3 +17,8 @@ RUN export GOPROXY=$PROXY
 RUN apk add gcc
 RUN apk add libc-dev
 RUN apk add --no-cache git
+
+# ############## work dir ###########
+RUN mkdir -p $GOPRODIR
+
+WORKDIR $GOPRODIR
